@@ -12,8 +12,8 @@ Each adapter maps domain ontology → visual hints:
 """
 
 from typing import Optional
-from .foundation import BrickComposition, Brick
-from .generic import (
+from foundation import BrickComposition, Brick
+from generic import (
     GenericComposition, GenericNode, GenericEdge,
     NodeVisual, EdgeVisual
 )
