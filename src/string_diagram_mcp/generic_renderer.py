@@ -14,11 +14,11 @@ from dataclasses import dataclass
 from collections import defaultdict
 import math
 
-from .generic import (
+from generic import (
     GenericComposition, GenericNode, GenericEdge,
     NodeVisual, EdgeVisual
 )
-from .foundation import Point
+from foundation import Point
 
 
 # ============================================================================
