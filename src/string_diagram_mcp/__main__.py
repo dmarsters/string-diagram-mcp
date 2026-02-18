@@ -8,7 +8,7 @@ For local execution:
     python -m string_diagram_mcp
 """
 
-from string_diagram_mcp.server import mcp
+from server import mcp
 
 if __name__ == "__main__":
     mcp.run()
