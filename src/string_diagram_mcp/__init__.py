@@ -14,7 +14,7 @@ Three pipelines:
   Adapted   — BrickComposition → LushyBrickAdapter → GenericCompactRenderer
 """
 
-from .foundation import (
+from foundation import (
     # Core types
     Point, Annotation, CostSummary, StringDiagram,
     Layout, BrickPosition, Wire, WireRouting,
@@ -26,12 +26,12 @@ from .foundation import (
     validate_composition,
     create_sample_brick, create_sample_composition,
 )
-from .brick import StringDiagramBrick, create_string_diagram
-from .contextual import CostAnalyzer, SVGRenderer, CompactSVGRenderer
-from .generic_pipeline import (
+from brick import StringDiagramBrick, create_string_diagram
+from contextual import CostAnalyzer, SVGRenderer, CompactSVGRenderer
+from generic_pipeline import (
     GenericDiagramGenerator,
     GenericLayoutComputer, GenericWireRouter, GenericCompactRenderer,
 )
-from .adapters import LushyBrickAdapter, ZXCalculusAdapter
+from adapters import LushyBrickAdapter, ZXCalculusAdapter
 
 __version__ = "2.0.0"
