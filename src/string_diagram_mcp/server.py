@@ -21,20 +21,20 @@ from fastmcp import FastMCP
 from typing import Optional, Literal
 import json
 
-from string_diagram_mcp.brick import StringDiagramBrick
-from string_diagram_mcp.foundation import (
+from brick import StringDiagramBrick
+from foundation import (
     BrickComposition, Brick, Layer, Connection,
     create_sample_brick, create_sample_composition
 )
-from string_diagram_mcp.generic import (
+from generic import (
     GenericComposition, parse_generic_composition,
     validate_generic_composition,
     create_sample_generic_sequential,
     create_sample_generic_quantum,
     create_sample_generic_branching,
 )
-from string_diagram_mcp.generic_renderer import GenericCompactRenderer
-from string_diagram_mcp.adapters import brick_to_generic
+from generic_renderer import GenericCompactRenderer
+from adapters import brick_to_generic
 
 # Initialize FastMCP server
 mcp = FastMCP("string-diagram-generator")
