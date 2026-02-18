@@ -704,3 +704,6 @@ def get_server_info() -> str:
         'repository': 'https://github.com/lushy/string-diagram-brick',
         'documentation': 'See STRING_DIAGRAM_README.md'
     }, indent=2)
+
+if __name__ == "__main__":
+    mcp.run()
