@@ -13,7 +13,7 @@ from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass
 import math
 
-from .foundation import (
+from foundation import (
     GenericComposition, Node, Edge, NodeVisual, EdgeVisual,
     Point, Layout, BrickPosition, Wire, WireRouting,
     CostSummary, Annotation, StringDiagram
