@@ -17,7 +17,7 @@ from dataclasses import dataclass
 from datetime import datetime
 import math
 
-from .foundation import (
+from foundation import (
     Annotation, CostSummary, Point, BrickComposition, Brick,
     Layout, WireRouting, Wire, BrickPosition, DiagramPrimitives
 )
