@@ -9,7 +9,7 @@ Zero LLM cost - pure geometric algorithms.
 """
 
 from typing import List, Dict
-from .foundation import (
+from foundation import (
     Wire, WireRouting, Point, BrickComposition, Brick, 
     Layout, BrickPosition, DiagramPrimitives
 )
