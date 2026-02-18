@@ -11,7 +11,7 @@ Zero LLM cost - pure graph algorithms.
 from typing import List, Dict, Set, Tuple
 from collections import defaultdict, deque
 
-from .foundation import (
+from foundation import (
     BrickComposition, Brick, Layout, BrickPosition, Point, 
     DiagramPrimitives
 )
