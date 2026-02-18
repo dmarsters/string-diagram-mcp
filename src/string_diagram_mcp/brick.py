@@ -21,13 +21,13 @@ Total cost: 0 tokens (deterministic) or ~200 tokens (with LLM annotations)
 from typing import Optional, Literal
 from datetime import datetime
 
-from .foundation import (
+from foundation import (
     BrickComposition, StringDiagram, DiagramPrimitives,
     validate_composition, Annotation
 )
-from .structure import LayoutComputer
-from .relational import WireRouter
-from .contextual import CostAnalyzer, SVGRenderer, CompactSVGRenderer
+from structure import LayoutComputer
+from relational import WireRouter
+from contextual import CostAnalyzer, SVGRenderer, CompactSVGRenderer
 
 
 # Valid render style values
