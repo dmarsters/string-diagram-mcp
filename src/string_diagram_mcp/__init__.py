@@ -1,36 +1,37 @@
 """
-String Diagram Generator MCP Server
-====================================
+String Diagram Generator MCP Server v2.0
+=========================================
 
 Category-theoretic visualization for any composition.
 
-Input schemas:
-- GenericComposition: Universal — any category's objects and morphisms
-- BrickComposition: Lushy-specific — 4-layer bricks with grades
+Two input schemas:
+  GenericComposition — any category (nodes + edges + visual hints)
+  BrickComposition  — Lushy-specific (4-layer bricks with grades)
 
-Render styles:
-- generic_compact: Universal renderer reading visual hints
-- compact: ZX-style compact nodes (brick-specific)
-- box: Original box-and-wire (brick-specific)
+Three pipelines:
+  Generic   — GenericComposition → GenericCompactRenderer
+  Brick     — BrickComposition → SVGRenderer | CompactSVGRenderer  
+  Adapted   — BrickComposition → LushyBrickAdapter → GenericCompactRenderer
 """
 
 from .foundation import (
+    # Core types
+    Point, Annotation, CostSummary, StringDiagram,
+    Layout, BrickPosition, Wire, WireRouting,
+    # Generic schema
+    GenericComposition, Node, Edge, NodeVisual, EdgeVisual,
+    validate_generic_composition,
+    # Lushy schema
     BrickComposition, Brick, Layer, Connection,
-    StringDiagram, DiagramPrimitives,
+    validate_composition,
     create_sample_brick, create_sample_composition,
-    validate_composition
 )
-from .generic import (
-    GenericComposition, GenericNode, GenericEdge,
-    NodeVisual, EdgeVisual,
-    parse_generic_composition, validate_generic_composition,
-    create_sample_generic_sequential,
-    create_sample_generic_quantum,
-    create_sample_generic_branching,
-)
-from .generic_renderer import GenericCompactRenderer
-from .adapters import brick_to_generic
 from .brick import StringDiagramBrick, create_string_diagram
 from .contextual import CostAnalyzer, SVGRenderer, CompactSVGRenderer
+from .generic_pipeline import (
+    GenericDiagramGenerator,
+    GenericLayoutComputer, GenericWireRouter, GenericCompactRenderer,
+)
+from .adapters import LushyBrickAdapter, ZXCalculusAdapter
 
 __version__ = "2.0.0"
